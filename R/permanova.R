@@ -53,9 +53,6 @@ permanova <-
         warning(paste0(str1, "will treat it as a binary variable\n"))
         var2test_type = "binary"
       }
-      if(min(table(x)) < 5){
-        stop("permutation test will be inaccurate with n < 5 in each group\n")
-      }
     }else{
       if(var2test_type == "binary"){
         str1 = "the variable to test has only more than two unique values, "
